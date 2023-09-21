@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title Icon -->
+    <link rel="shortcut icon" href="./images/x-icon.svg" type="image/x-icon">
+    <!-- daisyUi and tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <title>My PH Tube</title>
+</head>
+<body>
+    <header class="mx-auto pt-10 md:px-16">
+        <nav class="px-4 flex items-center md:gap-0 gap-2 flex-wrap md:justify-between justify-center border-b-2 pb-5">
+            <div class="flex gap-2 items-center">
+                <img src="./images/x-icon.svg" alt="">
+                <p class="font-bold text-3xl text-[#252525]"><span class="text-[#FF1F3D]">PH </span>Tube</p>
+            </div>
+            <button onclick="sortedItem()" class="bg-[#25252533] focus:bg-[#FF1F3D] active:bg-red-300 focus:text-white hover:bg-[#FF1F3D] hover:text-white md:px-5 md:mr-24 rounded-md text-[#252525] normal-case btn-sm text-base font-medium">Sort by view</button>
+            <button onclick="handleBlogPage()" class="btn bg-[#FF1F3D] md:px-5 rounded-md text-white normal-case btn-sm text-base font-medium">Blog</button>
+        </nav>
+    </header>
+
+    <main class="mx-auto pt-10 md:px-16 px-6">
+        <section class="flex justify-center gap-6 py-8" id="category-container"></section>
+        <section class="xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 grid grid-cols-1 gap-6 justify-between place-items-center" id="video-container">
+
+        </section>
+        <section>
+            <div class="card mt-24 card-body" id="blank-category"></div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+    <script src="tailwind.config.js"></script>
+</body>
+</html>
